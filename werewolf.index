@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <index>
   <info>
-    <name>Werewolf</name>
-    <description>Custom race: Werewolf — a humanoid cursed with lycanthropy, capable of shifting between human, wolf, and hybrid forms.</description>
+    <name>Werewolf Race</name>
+    <description>A custom race option for Aurora Builder representing the cursed lycanthrope.</description>
     <author url="https://roll20.net/compendium/dnd5e/Werewolf#content">Fawkes</author>
     <update version="1.0" />
   </info>
