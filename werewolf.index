@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <index>
   <info>
-    <name>Werewolf</name>
-    <description>A custom race option for Aurora Builder, based on the cursed lycanthrope.</description>
-    <author>Fawkes</author>
-    <update version="1.0" url="https://raw.githubusercontent.com/Khash78/Aurora/refs/heads/main/index.xml" />
+    <name>Werewolf Race</name>
+    <update version="1.0.0">
+      <file name="index.xml" url="https://raw.githubusercontent.com/Khash78/Aurora/refs/heads/main/index.xml" />
+    </update>
   </info>
 
   <files>
