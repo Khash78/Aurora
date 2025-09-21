@@ -6,6 +6,6 @@
     <update version="1.0">2025-09-21</update>
   </info>
   <files>
-    <file name="race-werewolf.xml" url="https://raw.githubusercontent.com/Khash78/Aurora/refs/heads/main/race-werewolf.xml" />
+    <file name="race-werewolf.xml" url="https://raw.githubusercontent.com/Khash78/Aurora/refs/heads/main/race-werewolf.xml"/>
   </files>
 </index>
