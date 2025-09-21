@@ -1,59 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
 <elements>
-<info>
-<name>Werewolf</name>
-<description/>
-<author url="https://roll20.net/compendium/dnd5e/Werewolf#content">Fawkes</author>
-<update version="1.0">
-<file name="race-werewolf.xml" url="https://raw.githubusercontent.com/Khash78/Aurora/refs/heads/main/race-werewolf.xml"/>
-</update>
-</info>
+  <info>
+    <name>Werewolf</name>
+    <description>A humanoid cursed with lycanthropy, capable of shifting between human, wolf, and hybrid forms.</description>
+    <author url="https://roll20.net/compendium/dnd5e/Werewolf#content">Fawkes</author>
+    <update version="1.0">
+      <file name="race-werewolf.xml" url="https://raw.githubusercontent.com/Khash78/Aurora/refs/heads/main/race-werewolf.xml"/>
+    </update>
+  </info>
 
-<element name="Werewolf" type="Race" source="Homebrew" id="ID_RACE_WEREWOLF">
-<description>
-<p class="flavor">A humanoid cursed with the savage and terrifying power of lycanthropy. Werewolves can shift between humanoid, wolf, and hybrid forms.</p>
+  <element name="Werewolf" type="Race" source="Homebrew" id="ID_RACE_WEREWOLF">
+    <description>
+      <p class="flavor">Werewolves are humans cursed to transform into wolves or hybrid forms, gaining enhanced strength, senses, and regenerative abilities.</p>
+      <h4>LYCANTHROPY</h4>
+      <p>As a werewolf, you can transform into a wolf or hybrid form. You gain natural attacks, enhanced speed, and heightened senses.</p>
+    </description>
+    <sheet display="false"/>
+    <setters>
+      <set name="height" modifier="2d6">6'0"</set>
+      <set name="weight" modifier="2d8">180 lb.</set>
+    </setters>
+    <rules>
+      <stat name="strength" value="2"/>
+      <stat name="dexterity" value="1"/>
+      <stat name="innate speed" value="35" bonus="base"/>
+      <grant type="Size" id="ID_SIZE_MEDIUM"/>
+      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_REGENERATION"/>
+      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_NATURAL_ATTACKS"/>
+      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_HEIGHTENED_SENSES"/>
+    </rules>
+  </element>
 
-<h4>LYCANTHROPIC ABILITIES</h4>
-<p><span class="feature">Shapechanger.</span> You can use your action to polymorph into a wolf-humanoid hybrid or into a wolf, or back into your true form. Equipment does not transform. You revert if you die.</p>
-<p><span class="feature">Keen Hearing and Smell.</span> Advantage on Wisdom (Perception) checks that rely on hearing or smell.</p>
-<p><span class="feature">Damage Immunities.</span> You are immune to bludgeoning, piercing, and slashing damage from nonmagical attacks not made with silvered weapons.</p>
-<p><span class="feature">Languages.</span> Common (cannot speak in wolf form).</p>
-</description>
+  <element name="Regeneration" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_REGENERATION">
+    <description>
+      <p>You regain hit points quickly, recovering 1d6 per round while not at 0 HP.</p>
+    </description>
+  </element>
 
-<sheet display="false"/>
+  <element name="Natural Attacks" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_NATURAL_ATTACKS">
+    <description>
+      <p>You can make claw attacks (1d6) or bite attacks (1d8) in hybrid or wolf form.</p>
+    </description>
+  </element>
 
-<setters>
-<set name="size">Medium</set>
-<set name="speed">30</set>
-<set name="speed:Wolf">40</set>
-</setters>
-
-<rules>
-<stat name="strength" value="2"/>
-<stat name="dexterity" value="1"/>
-<stat name="constitution" value="1"/>
-<grant type="Size" id="ID_SIZE_MEDIUM"/>
-<grant type="Language" id="ID_LANGUAGE_COMMON"/>
-<grant type="Racial Trait" id="ID_RACIAL_TRAIT_SHAPECHANGER"/>
-<grant type="Racial Trait" id="ID_RACIAL_TRAIT_DAMAGE_IMMUNITY"/>
-<grant type="Racial Trait" id="ID_RACIAL_TRAIT_KEEN_HEARING_SMELL"/>
-</rules>
-</element>
-
-<element name="Shapechanger" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_SHAPECHANGER">
-<description>
-<p>You can shift into wolf or hybrid form. Statistics remain the same except AC. Equipment does not transform.</p>
-</description>
-</element>
-
-<element name="Keen Hearing and Smell" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_KEEN_HEARING_SMELL">
-<description>
-<p>You have advantage on Wisdom (Perception) checks that rely on hearing or smell.</p>
-</description>
-</element>
-
-<element name="Damage Immunity" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_DAMAGE_IMMUNITY">
-<description>
-<p>You are immune to bludgeoning, piercing, and slashing damage from nonmagical attacks that aren’t silvered.</p>
-</description>
-</element>
+  <element name="Heightened Senses" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_HEIGHTENED_SENSES">
+    <description>
+      <p>You have advantage on perception checks relying on smell or hearing.</p>
+    </description>
+  </element>
 </elements>
