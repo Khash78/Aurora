@@ -2,10 +2,12 @@
 <index>
   <info>
     <name>Werewolf</name>
-    <author>Fawkes</author>
-    <description>A humanoid cursed with lycanthropy, capable of shifting between human, wolf, and hybrid forms.</description>
-    <update version="1.0">
-      <file name="race-werewolf.xml" url="https://raw.githubusercontent.com/Khash78/Aurora/refs/heads/main/race-werewolf.xml"/>
-    </update>
+    <description>Custom race: Werewolf — a humanoid cursed with lycanthropy, capable of shifting between human, wolf, and hybrid forms.</description>
+    <author url="https://roll20.net/compendium/dnd5e/Werewolf#content">Fawkes</author>
+    <update version="1.0" />
   </info>
+
+  <files>
+    <file name="race-werewolf.xml" url="https://raw.githubusercontent.com/Khash78/Aurora/refs/heads/main/race-werewolf.xml" />
+  </files>
 </index>
