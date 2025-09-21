@@ -2,9 +2,9 @@
 <info>
 <name>Werewolf</name>
 <description/>
-<author url="https://roll20.net/compendium/dnd5e/Werewolf#content">Homebrew / Roll20</author>
+<author url="https://roll20.net/compendium/dnd5e/Werewolf#content">Fawkes</author>
 <update version="1.0">
-<file name="race-werewolf.xml" url="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/race-werewolf.xml"/>
+<file name="race-werewolf.xml" url="https://raw.githubusercontent.com/Khash78/Aurora/refs/heads/main/race-werewolf.xml"/>
 </update>
 </info>
 
