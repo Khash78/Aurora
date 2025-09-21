@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Werewolf</name>
-    <description>A humanoid cursed with lycanthropy, capable of shifting between human, wolf, and hybrid forms.</description>
+    <description>A humanoid cursed with lycanthropy; able to shift between human, wolf, or hybrid form, gaining heightened senses, natural attacks, and regeneration.</description>
     <author url="https://roll20.net/compendium/dnd5e/Werewolf#content">Fawkes</author>
     <update version="1.0">
       <file name="race-werewolf.xml" url="https://raw.githubusercontent.com/Khash78/Aurora/refs/heads/main/race-werewolf.xml"/>
@@ -11,41 +11,66 @@
 
   <element name="Werewolf" type="Race" source="Homebrew" id="ID_RACE_WEREWOLF">
     <description>
-      <p class="flavor">Werewolves are humans cursed to transform into wolves or hybrid forms, gaining enhanced strength, senses, and regenerative abilities.</p>
-      <h4>LYCANTHROPY</h4>
-      <p>As a werewolf, you can transform into a wolf or hybrid form. You gain natural attacks, enhanced speed, and heightened senses.</p>
+      <p class="flavor">Werewolves are humans cursed to become beasts under the moon, blending strength and ferocity with human cunning and resilience.</p>
+      <h4>LYCANTHROPY TRAITS</h4>
+      <p><span class="feature">Shapechanger.</span> As an action, you can transform into wolf or hybrid form. Your equipment does not transform and your statistics, except armor class, remain the same.</p>
+      <p><span class="feature">Regeneration.</span> You regenerate some hit points each round unless you are at 0 hit points.</p>
+      <p><span class="feature">Natural Attacks.</span> In wolf or hybrid form you have bite (1d8) and claw (1d6) attacks.</p>
+      <p><span class="feature">Heightened Senses.</span> You have advantage on Perception checks relying on hearing or smell.</p>
+      <p><span class="feature">Darkvision.</span> You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light.</p>
     </description>
     <sheet display="false"/>
     <setters>
-      <set name="height" modifier="2d6">6'0"</set>
-      <set name="weight" modifier="2d8">180 lb.</set>
+      <set name="size">Medium</set>
+      <set name="speed">30</set>
+      <set name="speed:Wolf">40</set>
     </setters>
     <rules>
-      <stat name="strength" value="2"/>
-      <stat name="dexterity" value="1"/>
-      <stat name="innate speed" value="35" bonus="base"/>
+      <stat name="strength" value="15"/>
+      <stat name="dexterity" value="13"/>
+      <stat name="constitution" value="14"/>
+      <stat name="intelligence" value="10"/>
+      <stat name="wisdom" value="11"/>
+      <stat name="charisma" value="10"/>
+
       <grant type="Size" id="ID_SIZE_MEDIUM"/>
+      <grant type="Language" id="ID_LANGUAGE_COMMON"/>
+      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_SHAPECHANGER"/>
       <grant type="Racial Trait" id="ID_RACIAL_TRAIT_REGENERATION"/>
       <grant type="Racial Trait" id="ID_RACIAL_TRAIT_NATURAL_ATTACKS"/>
       <grant type="Racial Trait" id="ID_RACIAL_TRAIT_HEIGHTENED_SENSES"/>
+      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_DARKVISION"/>
     </rules>
+  </element>
+
+  <element name="Shapechanger" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_SHAPECHANGER">
+    <description>
+      <p>You can transform into wolf or hybrid form. Only your AC changes in those forms; equipment remains unaffected.</p>
+    </description>
   </element>
 
   <element name="Regeneration" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_REGENERATION">
     <description>
-      <p>You regain hit points quickly, recovering 1d6 per round while not at 0 HP.</p>
+      <p>You regain 1 hit point at the start of your turn if you are not at 0 hit points.</p>
     </description>
   </element>
 
   <element name="Natural Attacks" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_NATURAL_ATTACKS">
     <description>
-      <p>You can make claw attacks (1d6) or bite attacks (1d8) in hybrid or wolf form.</p>
+      <p>You have special attacks: a bite dealing 1d8 damage, and claws dealing 1d6 damage when in wolf or hybrid form.</p>
     </description>
   </element>
 
   <element name="Heightened Senses" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_HEIGHTENED_SENSES">
     <description>
-      <p>You have advantage on perception checks relying on smell or hearing.</p>
+      <p>You have advantage on Perception checks that rely on hearing or smell.</p>
     </description>
   </element>
+
+  <element name="Darkvision" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_DARKVISION">
+    <description>
+      <p>You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light.</p>
+    </description>
+  </element>
+
 </elements>
