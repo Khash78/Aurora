@@ -1,100 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <elements>
   <info>
-    <name>Werewolf</name>
-    <description>
-      A humanoid cursed with lycanthropy. Werewolves can transform into wolf or hybrid form,
-      gaining enhanced strength, speed, and heightened senses at the cost of their humanity.
-    </description>
-    <author url="https://roll20.net/compendium/dnd5e/Werewolf#content">Fawkes</author>
-    <update version="1.0" />
+    <name>Werewolf Race</name>
+    <update version="1.0.0">
+      <file name="race-werewolf.xml" url="https://raw.githubusercontent.com/Khash78/Aurora/refs/heads/main/race-werewolf.xml" />
+    </update>
   </info>
 
-  <!-- Main Race Definition -->
   <element name="Werewolf" type="Race" source="Homebrew" id="ID_RACE_WEREWOLF">
     <description>
-      <p class="flavor">Cursed by the moon, werewolves exist in a constant struggle between humanity and beast.</p>
-
-      <h4>Ability Score Increase</h4>
-      <p>Your Strength score increases by 2, and your Dexterity increases by 1.</p>
-
-      <h4>Age</h4>
-      <p>Werewolves mature at the same rate as humans but live slightly longer due to their regenerative abilities.</p>
-
-      <h4>Alignment</h4>
-      <p>Werewolves lean toward chaotic alignments, reflecting their untamed nature.</p>
-
-      <h4>Size</h4>
-      <p>Werewolves are Medium-sized.</p>
-
-      <h4>Speed</h4>
-      <p>Your base walking speed is 35 feet. In wolf form, your speed is 40 feet.</p>
-
-      <h4>Shapechanger</h4>
-      <p>You can transform into wolf or hybrid form as an action. Your equipment does not change form.</p>
-
-      <h4>Regeneration</h4>
-      <p>You regain 1 hit point at the start of your turn if you have at least 1 hit point.</p>
-
-      <h4>Natural Attacks</h4>
-      <p>You can make claw attacks (1d6 slashing) or bite attacks (1d8 piercing) in wolf or hybrid form.</p>
-
-      <h4>Heightened Senses</h4>
-      <p>You have advantage on Wisdom (Perception) checks that rely on smell or hearing.</p>
-
-      <h4>Darkvision</h4>
-      <p>You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light.</p>
+      <p class="flavor">Cursed with lycanthropy, a Werewolf can transform into a wolf or hybrid form, gaining enhanced strength, speed, and senses.</p>
     </description>
-
+    <sheet display="false"/>
     <setters>
-      <set name="size">Medium</set>
-      <set name="speed">35</set>
-      <set name="speed:Wolf">40</set>
+      <set name="speed" modifier="0">30</set>
     </setters>
-
     <rules>
       <stat name="strength" value="2"/>
       <stat name="dexterity" value="1"/>
-
+      <stat name="innate speed" value="30" bonus="base"/>
       <grant type="Size" id="ID_SIZE_MEDIUM"/>
-      <grant type="Language" id="ID_LANGUAGE_COMMON"/>
-      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_WEREWOLF_SHAPECHANGER"/>
-      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_WEREWOLF_REGENERATION"/>
-      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_WEREWOLF_NATURAL_ATTACKS"/>
-      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_WEREWOLF_HEIGHTENED_SENSES"/>
-      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_WEREWOLF_DARKVISION"/>
+      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_WEREWOLF_TRANSFORMATION"/>
     </rules>
   </element>
 
-  <!-- Traits -->
-  <element name="Shapechanger" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_WEREWOLF_SHAPECHANGER">
+  <element name="Werewolf Transformation" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_WEREWOLF_TRANSFORMATION">
     <description>
-      <p>You can transform into wolf or hybrid form as an action. Equipment does not transform.</p>
+      <p>Allows the Werewolf to transform into a wolf or hybrid form. Gains bonuses to strength, speed, and senses while transformed.</p>
     </description>
-  </element>
-
-  <element name="Regeneration" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_WEREWOLF_REGENERATION">
-    <description>
-      <p>You regain 1 hit point at the start of your turn if you are not at 0 hit points.</p>
-    </description>
-  </element>
-
-  <element name="Natural Attacks" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_WEREWOLF_NATURAL_ATTACKS">
-    <description>
-      <p>In wolf or hybrid form, you can make a bite (1d8 piercing) or claw (1d6 slashing) attack.</p>
-    </description>
-  </element>
-
-  <element name="Heightened Senses" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_WEREWOLF_HEIGHTENED_SENSES">
-    <description>
-      <p>You have advantage on Wisdom (Perception) checks that rely on smell or hearing.</p>
-    </description>
-  </element>
-
-  <element name="Darkvision" type="Racial Trait" source="Homebrew" id="ID_RACIAL_TRAIT_WEREWOLF_DARKVISION">
-    <description>
-      <p>You can see in dim light within 60 feet as if it were bright light, and in darkness as if it were dim light.</p>
-    </description>
+    <sheet display="false"/>
+    <rules>
+      <stat name="strength" value="2" modifier="temporary"/>
+      <stat name="dexterity" value="1" modifier="temporary"/>
+    </rules>
   </element>
 
 </elements>
